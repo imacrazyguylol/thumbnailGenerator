@@ -15,14 +15,20 @@ preferences.rulerUnits = Units.PIXELS;
 
 var template = open(openDialog()[0]);
 activeDocument = template;
-var templateRef = template
+var docRef = template
 
-templateRef.activeLayer = templateRef.layers[2];
-var commentRef = templateRef.activeLayer.textItem;
+docRef.activeLayer = docRef.layers[2];
+var commentRef = docRef.activeLayer.textItem;
 commentRef.contents = "BALLS";
+commentRef = null;
 
-templateRef = null;
-artLayerRef = null;
-textItemRef = null;
+var newBkgImage = new File(""); //map bkg, must be local on device I think
+var layerRef = docRef.activeLayer;
+layerRef = docRef.layers[length(docRef.layers)]; //lowest layer which would be background
+layerRef = replaceContents(newBkgImage);
+layerRef = null;
 
+
+
+docRef = null;
 app.preferences.rulerUnits = originalUnit;
