@@ -15,14 +15,17 @@ preferences.rulerUnits = Units.PIXELS;
 
 var template = open(openDialog()[0]);
 activeDocument = template;
-var templateRef = template
+var docRef = template
 
-templateRef.activeLayer = templateRef.layers[2];
-var commentRef = templateRef.activeLayer.textItem;
+docRef.activeLayer = docRef.layers[2];
+var commentRef = docRef.activeLayer.textItem;
 commentRef.contents = "BALLS";
+commentRef = null;
 
-templateRef = null;
-artLayerRef = null;
-textItemRef = null;
+imageLayer = artLayers.add();
+var replacementFile = new File(openDialog()[0]);
+imageLayer = replaceContents(replacementFile);
 
+
+docRef = null;
 app.preferences.rulerUnits = originalUnit;
