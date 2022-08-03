@@ -1,5 +1,5 @@
-const CLIENT_ID = 16965;
-const CLIENT_SECRET = "62M0ATIFPIgmyZzyLdGxfAWJZXW4w4vjOnjVo7ob"
+const CLIENT_ID = //no;
+const CLIENT_SECRET = //no
 const { v2, auth, tools } = require('osu-api-extended')
 
 
