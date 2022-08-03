@@ -22,12 +22,9 @@ var commentRef = docRef.activeLayer.textItem;
 commentRef.contents = "BALLS";
 commentRef = null;
 
-var newBkgImage = new File(""); //map bkg, must be local on device I think
-var layerRef = docRef.activeLayer;
-layerRef = docRef.layers[length(docRef.layers)]; //lowest layer which would be background
-layerRef = replaceContents(newBkgImage);
-layerRef = null;
-
+imageLayer = artLayers.add();
+var replacementFile = new File(openDialog()[0]);
+imageLayer = replaceContents(replacementFile);
 
 
 docRef = null;
