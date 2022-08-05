@@ -26,6 +26,5 @@ imageLayer = artLayers.add();
 var replacementFile = new File(openDialog()[0]);
 imageLayer = replaceContents(replacementFile);
 
-
 docRef = null;
 app.preferences.rulerUnits = originalUnit;
