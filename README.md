@@ -1,6 +1,7 @@
 # thumbnailGenerator
 This is a generator for youtube thumbnails using Adobe's CEP and extention stuff.
-#####[Documentation](https://raw.githubusercontent.com/Adobe-CEP/CEP-Resources/master/Documentation/Product%20specific%20Documentation/Photoshop%20Scripting/photoshop-javascript-ref-2020.pdf)
+
+[Documentation](https://raw.githubusercontent.com/Adobe-CEP/CEP-Resources/master/Documentation/Product%20specific%20Documentation/Photoshop%20Scripting/photoshop-javascript-ref-2020.pdf)
 
 ### dependencies:
 [ck's osu-api-extended](https://github.com/cyperdark/osu-api-extended)
