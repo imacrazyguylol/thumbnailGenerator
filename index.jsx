@@ -35,7 +35,18 @@ var docRef = app.activeDocument;
 //var commentRef = docRef.activeLayer.textItem;
 //commentRef.contents = "BALLS";
 //commentRef = null;
-function backgroundReplace(){
+
+function srcPrompt() {
+    
+    var scoreURL;
+    var dlg = new Window('dialog', 'input');
+        dlg.add('edittext', {}, 'Score URL', {name: 'url'});
+        EditText.addEventListener('change', function(){alert('hello')});
+
+    dlg.show;
+}
+
+/*function backgroundReplace() {
     //mostly working, just have to get the percentages consistent
 
     docRef.activeLayer = docRef.artLayers.add();
@@ -47,11 +58,12 @@ function backgroundReplace(){
         bkgRef.move(docRef, ElementPlacement.PLACEATEND);
         convertToSmartObject();
         replaceContents(replacementFile);
-        //docRef.activeLayer.resize(uToPer(/*whatever the standard is for beatmaps, or get from api maybe?*/, 1920), uToPer(/*same*/, 1080), AnchorPosition.MIDDLECENTER);
+        //docRef.activeLayer.resize(uToPer(/*whatever the standard is for beatmaps, or get from api maybe?* /, 1920), uToPer(/*same* /, 1080), AnchorPosition.MIDDLECENTER);
         docRef.activeLayer.resize(100, 100, AnchorPosition.MIDDLECENTER)
     bkgRef = null;
-}
+}*/
 
-backgroundReplace();
+srcPrompt();
+//backgroundReplace();
 docRef = null;
 app.preferences.rulerUnits = originalUnit;
