@@ -22,9 +22,9 @@ const main = async () => {
         }
       }
     };
-    prompt.start();
 
     //temp input method for use outside of PS
+    prompt.start();
     const scoreURL = (await prompt.get(schema)).url;
     
     function convertURL(url){
