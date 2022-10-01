@@ -37,12 +37,10 @@ var docRef = app.activeDocument;
 //commentRef = null;
 
 function srcPrompt() {
-    
     var scoreURL;
     var dlg = new Window('dialog', 'input');
-        dlg.add('edittext', {}, 'Score URL', {name: 'url'});
-        EditText.addEventListener('change', function(){alert('hello')});
-
+        dlg.add('edittext', {x: 0, y: 0, width: 200, height: 20}, 'Score URL', {name: 'url'});
+        EditText.addEventListener('change');
     dlg.show;
 }
 

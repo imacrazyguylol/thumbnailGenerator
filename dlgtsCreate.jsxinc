@@ -1,0 +1,15 @@
+function create(textBoxRefContents) {
+        docRef = app.documents.add(1920, 1080, 100, 'doc');
+    
+        newLayerRef = docRef.artLayers.add();
+        //newLayerRef.name = 'this is what you had input';
+        newLayerRef.kind = LayerKind.TEXT;
+        newLayerRef.position = [
+                new UnitValue(100, 'px'),
+                new UnitValue(100, 'px')
+        ]
+        newLayerRef.textItem.size = 64;
+        newLayerRef.textItem.color.rgb.hexValue = 'BD2D2D';
+        newLayerRef.textItem.contents = textBoxRefContents;
+        
+}
